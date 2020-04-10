@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'contacts.apps.ContactsConfig',
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
@@ -140,5 +141,13 @@ MEDIA_URL = '/media/'
 # Messages
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
-    messages.ERROR: 'danger'    
+    messages.ERROR: 'danger'
 }
+
+#Email Config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "jamminb73@gmail.com"
+EMAIL_HOST_PASSWORD = "ztoiohwuxsdicnml"
